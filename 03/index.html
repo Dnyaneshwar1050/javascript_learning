@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1 id="main"></h1>
+    <button id="btn">Start</button>
+    <script>
+        let main=document.getElementById("main");
+let btn=document.getElementById("btn");
+let x=prompt("Number of seconds ");
+
+let interval;
+btn.addEventListener('click',()=>{
+     interval=setInterval(timer,1000);
+})
+
+
+function timer(){
+    
+main.innerText=x;
+x=x-1;
+if(x==-1){
+    clearInterval(interval);
+}
+}
+
+    </script>
+</body>
+</html>
